@@ -1,1 +1,1 @@
-# CozmicRacer.GitHub.io
+# CozmicRacer.github.io
