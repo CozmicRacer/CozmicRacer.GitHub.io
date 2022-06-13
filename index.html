@@ -7,7 +7,17 @@ integrity="sha384-BVYiiSIFeK1dGmJRAkycuGAHRg320mUcww7on3RYdg4Va+PmSTsz/K68vbdEjh
 </head>
 <body>
 <h1>Game Generator 5000</h1>
-<button id="refreshGameButton">Choose a game</button>
-<h2>Game to play: <span id="randomGame">...</span></h2>
+<button class="btn btn-primary btn-lg" oneclick="completeSentence(gameArray, 'randomGame')">Choose a game</button>
+<h2>Game to play: <span id="randomGame" class="label label-success">...</span></h2>
+<script>
+var gameArray = ["Corners", "Dodgeball", "pip, squeek, Ethelred", "Cricket", "Skittles", "Miwgill's war"];
+
+function randomIndex(arr) {
+return Math.floor((Math.random() * arr.length));
+}
+function completeSentence(arr, location) {
+index = randomIndex(arr);
+document.getElementaryById(location).innerHTML = arr[index];
+}
 </body>
 </html>
